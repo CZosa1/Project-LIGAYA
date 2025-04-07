@@ -11,8 +11,9 @@ main.homePage {
 		background-image: linear-gradient(-45deg, hsl(40, 9%, 87%), hsl(40, 9%, 67%));
 		text-align: center;
 		font-family: 'Oswald', 'Gill Sans', 'Gill Sans MT', sans-serif;
+		margin-bottom: 64px;
 		
-		> .logo {
+		> img.logo {
 			width: 65%;
 			margin-bottom: 32px;
 			border-radius: 32px;
@@ -20,43 +21,13 @@ main.homePage {
 			outline: 8px dashed hsla(0, 0%, 0%, 0.15);
 		}
 		
-		> .title {
+		> h1.title {
 			font-weight: normal;
 		}
 		
-		> .obmc {
+		> h2.obmc {
 			font-weight: normal;
 			color: hsl(209, 87%, 21%);
-		}
-		
-		> .instagramLink {
-			display: flex;
-			flex-direction: row;
-			align-items: center;
-			gap: 8px;
-			padding: 6px;
-			
-			> .logo {
-				border-radius: 100%;
-				background-color: white;
-				border: 5px solid black;
-				width: 32px;
-				height: 32px;
-			}
-			
-			> .url {
-				width: 0;
-				opacity: 0;
-				transition: width 400ms, opacity 300ms;
-				transition-timing-function: cubic-bezier(0.175, 0.885, 0.32, 1.275);
-				pointer-events: none;
-			}
-			
-			&:hover > .url {
-				opacity: 1;
-				width: 252px;
-				color: hsl(219, 63%, 54%);
-			}
 		}
 	}
 	
@@ -68,6 +39,7 @@ main.homePage {
 			width: 60%;
 			font-size: 1.3rem;
 			line-height: 2;
+			font-family: 'Gill Sans', 'Gill Sans MT', sans-serif;
 			
 			> .first {
 				text-align: justify;

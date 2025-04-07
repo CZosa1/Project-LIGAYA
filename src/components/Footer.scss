@@ -1,0 +1,45 @@
+footer {
+	display: flex;
+	flex-direction: row;
+	background-color: hsl(40, 9%, 87%);
+	margin-top: 64px;
+	font-family: 'Open Sans', sans-serif;
+	
+	> section {
+		padding: 32px;
+		font-size: 1.2rem;
+	}
+	
+	> section.left {
+		display: flex;
+		flex-direction: column;
+		flex-grow: 5;
+		gap: 16px;
+		
+		> .instagramLink {
+			> .logo {
+				border-radius: 100%;
+				background-color: white;
+				border: 5px solid black;
+				width: 32px;
+				height: 32px;
+			}
+		}
+	}
+	
+	> section.right {
+		display: flex;
+		flex-direction: column;
+		flex-grow: 0.5;
+		gap: 0;
+		
+		> p {
+			margin: 0 0 15px 0;
+		}
+		
+		> .small {
+			font-size: 1.1rem;
+			margin: 0 0 5px 0;
+		}
+	}
+}
