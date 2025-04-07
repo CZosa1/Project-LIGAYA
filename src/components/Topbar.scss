@@ -1,0 +1,86 @@
+.topbar {
+	background-color: hsla(40, 9%, 80%, 0.5);
+	backdrop-filter: blur(10px);
+	display: flex;
+	flex-direction: row;
+	position: fixed;
+	top: 0;
+	left: 0;
+	right: 0;
+	height: 60px;
+	
+	> .left {
+		display: flex;
+		flex-direction: row;
+		justify-content: left;
+		align-items: center;
+		gap: 16px;
+		flex-grow: 1;
+		padding: 0 10px;
+		
+		> .title {
+			font-family: 'Gaegu', 'Gill Sans', 'Gill Sans MT', sans-serif;
+			font-size: 2.5rem;
+			font-weight: bold;
+		}
+	}
+	
+	> .right {
+		display: flex;
+		flex-direction: row;
+		justify-content: right;
+		align-items: center;
+		gap: 0;
+		flex-grow: 1;
+		padding: 0 10px;
+		
+		> a {
+			font-family: 'Gill Sans', 'Gill Sans MT', sans-serif;
+			font-size: 1.2rem;
+			color: black;
+			text-decoration: none;
+			padding: 5px 12px;
+			position: relative;
+			
+			&:first-child {
+				border-left: none;
+			}
+			
+			&::after {
+				content: '';
+				background-color: red;
+				position: absolute;
+				left: 50%;
+				bottom: 0;
+				width: 0;
+				height: 3px;
+				transform: translateX(-50%);
+				transition: width 300ms;
+				transition-timing-function: ease-out;
+			}
+			
+			&.active {
+				&::after {
+					width: calc(100% - 16px);
+					transition-timing-function: cubic-bezier(0.175, 0.885, 0.32, 1.275);
+				}
+			}
+		}
+	}
+	
+	@media only screen and (max-width: 800px) {
+		height: 40px;
+		
+		> .left > .title {
+			font-size: 2rem;
+		}
+	}
+	
+	@media only screen and (max-width: 500px) {
+		height: 20px;
+		
+		> .left > .title {
+			font-size: 1rem;
+		}
+	}
+}

@@ -1,0 +1,29 @@
+body:has(main.notFoundPage) {
+	background-color: hsl(40, 9%, 87%);
+}
+
+main.notFoundPage {
+	> section {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		gap: 8px;
+		padding: 80px 0;
+	}
+	
+	> section.body {
+		font-family: 'Gill Sans', 'Gill Sans MT', sans-serif;
+		
+		> h1 {
+			font-size: 3rem;
+		}
+		
+		> .back {
+			text-decoration: none;
+			
+			&:hover {
+				text-decoration: underline;
+			}
+		}
+	}
+}
