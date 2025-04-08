@@ -59,4 +59,30 @@ main.missionPage {
 			line-height: 1;
 		}
 	}
+	
+	@media only screen and (max-width: 750px) {
+		> section.header {
+			padding: 50px 0;
+			
+			> h1 {
+				font-size: 4rem;
+			}
+		}
+		
+		> section.body {
+			gap: 32px;
+			
+			> div.content {
+				width: 80%;
+				gap: 16px;
+				line-height: 1.3;
+			}
+			
+			> div.mission {
+				width: 90%;
+				gap: 16px;
+				line-height: 1.3;
+			}
+		}
+	}
 }

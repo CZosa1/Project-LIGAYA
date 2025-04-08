@@ -34,7 +34,7 @@ main.whoPage {
 		> div.content {
 			width: 80vw;
 			display: grid;
-			grid-template-columns: 1fr 1fr 1fr 1fr;
+			grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
 			grid-template-rows: 1fr 1fr;
 			font-family: 'Gill Sans', 'Gill Sans MT', sans-serif;
 			font-weight: bold;
@@ -63,7 +63,7 @@ main.whoPage {
 			
 			> section.s2 {
 				grid-row: 1;
-				grid-column: span 2;
+				grid-column: span 3;
 				justify-content: center;
 				align-items: flex-start;
 				
@@ -79,6 +79,8 @@ main.whoPage {
 				border-radius: 10px;
 				
 				> img {
+					border-radius: 10px;
+					background-color: hsl(40, 9%, 87%);
 					width: 70%;
 				}
 			}
@@ -91,6 +93,8 @@ main.whoPage {
 				border-radius: 10px;
 				
 				> img {
+					border-radius: 10px;
+					background-color: hsl(40, 9%, 87%);
 					width: 70%;
 				}
 			}
@@ -103,6 +107,8 @@ main.whoPage {
 				border-radius: 10px;
 				
 				> img {
+					border-radius: 10px;
+					background-color: hsl(40, 9%, 87%);
 					width: 70%;
 				}
 			}
@@ -114,8 +120,41 @@ main.whoPage {
 				border-radius: 10px;
 				
 				> img {
+					border-radius: 10px;
+					background-color: hsl(40, 9%, 87%);
 					width: 70%;
 				}
+			}
+			
+			> section.s7 {
+				grid-row: 2;
+				grid-column: 5;
+				border: 2px solid black;
+				border-radius: 10px;
+				
+				> img {
+					border-radius: 10px;
+					background-color: hsl(40, 9%, 87%);
+					width: 70%;
+				}
+			}
+		}
+	}
+	
+	
+	@media only screen and (max-width: 750px) {
+		> section.header {
+			padding: 50px 0;
+			
+			> h1 {
+				font-size: 4rem;
+			}
+		}
+		
+		> section.body {
+			> div.content {
+				width: 100%;
+				overflow-x: auto;
 			}
 		}
 	}

@@ -1,7 +1,5 @@
 import ProjectLigayaLogo from '@/assets/ProjectLigayaLogo.png';
 
-import Footer from './Footer';
-
 import './HomePage.scss';
 
 const HomePage: React.FC = () => {
@@ -18,7 +16,6 @@ const HomePage: React.FC = () => {
 					<p className={'second'}>Grounded in research and driven by compassion, Project LIGAYA addresses the barriers to education faced by homeless and underserved children in the Philippines. In partnership with organizations like YMCA Makati's Gabay Aral, we aim to provide one-on-one tutoring, foundational literacy instruction, and essential school supplies to children housed in shelters such as Kanlungan sa Er-ma—where an estimated 50% of children lack basic reading and numeracy skills.</p>
 				</div>
 			</section>
-			<Footer />
 		</main>
 	);
 }

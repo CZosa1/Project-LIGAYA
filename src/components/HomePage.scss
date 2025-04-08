@@ -50,4 +50,12 @@ main.homePage {
 			}
 		}
 	}
+	
+	@media only screen and (max-width: 750px) {
+		> section.body > div.content {
+			width: 85%;
+			gap: 16px;
+			line-height: 1.5;
+		}
+	}
 }

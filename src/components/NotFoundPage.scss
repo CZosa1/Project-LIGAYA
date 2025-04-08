@@ -1,7 +1,3 @@
-body:has(main.notFoundPage) {
-	background-color: hsl(40, 9%, 87%);
-}
-
 main.notFoundPage {
 	> section {
 		display: flex;

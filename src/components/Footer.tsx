@@ -39,27 +39,30 @@ const Footer: React.FC = () => {
 	};
 	
 	return (
-		<footer>
-			<section className={'left'}>
-				<p>Office: {info?.office.phone ?? '*'.repeat(10)}</p>
-				<p>{info?.office.email ?? '*'.repeat(10)}</p>
-				<a className={'instagramLink'} href={'https://www.instagram.com/project._.ligaya'}>
-					<img className={'logo'} src={InstagramLogo} />
-				</a>
-			</section>
-			<section className={'right'}>
-				{state === 'none' ? (
-					<ReCAPTCHA sitekey={siteKey} onChange={onCaptchaChange} />
-				) : state === 'loading' ? (
-					<p>Verifying...</p>
-				) : null}
-				<p>For speaking requests and inquiries, please contact:</p>
-				<p className={'small'}>Ysabel Aquino</p>
-				<p>Phone: {info?.inquiries.phone ?? '*'.repeat(10)}</p>
-				<p className={'small'}>Georgine Malibiran</p>
-				<p>E-Mail: {info?.inquiries.email ?? '*'.repeat(10)}</p>
-			</section>
-		</footer>
+		<>
+			<div className={'spacer'} />
+			<footer>
+				<section className={'left'}>
+					<p>Office: {info?.office.phone ?? '*'.repeat(10)}</p>
+					<p>{info?.office.email ?? '*'.repeat(10)}</p>
+					<a className={'instagramLink'} href={'https://www.instagram.com/project._.ligaya'}>
+						<img className={'logo'} src={InstagramLogo} />
+					</a>
+				</section>
+				<section className={'right'}>
+					{state === 'none' ? (
+						<ReCAPTCHA sitekey={siteKey} onChange={onCaptchaChange} />
+					) : state === 'loading' ? (
+						<p>Verifying...</p>
+					) : null}
+					<p>For speaking requests and inquiries, please contact:</p>
+					<p className={'small'}>Ysabel Aquino</p>
+					<p>Phone: {info?.inquiries.phone ?? '*'.repeat(10)}</p>
+					<p className={'small'}>Georgine Malibiran</p>
+					<p>E-Mail: {info?.inquiries.email ?? '*'.repeat(10)}</p>
+				</section>
+			</footer>
+		</>
 	);
 }
 

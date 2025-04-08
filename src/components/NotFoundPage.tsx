@@ -4,7 +4,7 @@ import './NotFoundPage.scss';
 
 const NotFoundPage: React.FC = () => {
 	return (
-		<main className={'notFoundPage'}>
+		<main className={'notFoundPage'}	>
 			<section className={'body'}>
 				<h1>404 Not Found!</h1>
 				<Link to={'/'} className={'back'}>

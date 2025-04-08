@@ -1,32 +1,37 @@
 import { useEffect } from 'react';
 import { Routes, Route, useLocation } from 'react-router';
 
-import Topbar from '@/components/Topbar';
-
+import Topbar from './Topbar';
+import Footer from './Footer';
 import HomePage from './HomePage';
 import MissionPage from './MissionPage';
 import WhoPage from './WhoPage';
 import NotFoundPage from './NotFoundPage';
 
+import './App.scss';
+
 const App: React.FC = () => {
 	const location = useLocation();
 	
 	useEffect(() => {
-		window.scrollTo({ top: 0, behavior: 'instant' });
+		const root = document.getElementById('root');
+		if (root) {
+			root.scrollTo({ top: 0, behavior: 'smooth' });
+		}
 	}, [location]);
 	
 	return (
 		<>
 			<Topbar />
-			<Routes>
+			<Routes location={location}>
 				<Route path={'/'} element={<HomePage />} />
 				<Route path={'/mission'} element={<MissionPage />} />
 				<Route path={'/who'} element={<WhoPage />} />
 				<Route path={'*'} element={<NotFoundPage />} />
 			</Routes>
+			<Footer />
 		</>
 	);
-	// TODO: 404 page css
 }
 
 export default App;

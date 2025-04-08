@@ -1,7 +1,5 @@
 import ProjectLigayaLogo from '@/assets/ProjectLigayaLogo.png';
 
-import Footer from './Footer';
-
 import './MissionPage.scss';
 
 const MissionPage: React.FC = () => {
@@ -31,7 +29,6 @@ const MissionPage: React.FC = () => {
 					<p>We value the spirit of togetherness. Whether among students, volunteers, or partner organizations, we walk beside one another—shoulder to shoulder—in shared purpose.</p>
 				</div>
 			</section>
-			<Footer />
 		</main>
 	);
 }

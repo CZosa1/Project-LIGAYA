@@ -1,5 +1,6 @@
 .topbar {
-	background-color: hsla(40, 9%, 80%, 0.5);
+	background-color: hsl(40, 9%, 80%, 0.5);
+	box-shadow: 0 5px 30px hsla(0, 0%, 0%, 0.3);
 	backdrop-filter: blur(10px);
 	display: flex;
 	flex-direction: row;
@@ -9,6 +10,11 @@
 	right: 0;
 	height: 60px;
 	z-index: 5;
+	transition: box-shadow 200ms;
+	
+	&:hover {
+		box-shadow: 0 5px 50px hsla(0, 0%, 0%, 0.5);
+	}
 	
 	> .left {
 		display: flex;
@@ -25,6 +31,7 @@
 			font-weight: bold;
 			text-shadow: hsl(0, 0%, 0%) 0px 0px 10px;
 			color: hsl(0, 0%, 100%);
+			text-wrap: nowrap;
 			-webkit-font-smoothing: antialiased;
 		}
 	}
@@ -41,6 +48,7 @@
 		.link {
 			position: relative;
 			padding: 5px 12px;
+			text-wrap: nowrap;
 			
 			> a {
 				font-family: 'Gill Sans', 'Gill Sans MT', sans-serif;
@@ -107,19 +115,9 @@
 		}
 	}
 	
-	@media only screen and (max-width: 800px) {
-		height: 40px;
-		
-		> .left > .title {
-			font-size: 2rem;
-		}
-	}
-	
-	@media only screen and (max-width: 500px) {
-		height: 20px;
-		
-		> .left > .title {
-			font-size: 1rem;
+	@media only screen and (max-width: 750px) {
+		> .left {
+			display: none;
 		}
 	}
 }

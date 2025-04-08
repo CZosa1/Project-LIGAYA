@@ -1,0 +1,22 @@
+body, #root, p, h1, h2, h3, h4, h5, h6 {
+	margin: 0;
+	padding: 0;
+}
+
+body {
+	overflow: hidden;
+}
+
+#root {
+	position: fixed;
+	left: 0;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	padding-top: 60px;
+	display: flex;
+	flex-direction: column;
+	min-height: calc(100vh - 60px);
+	overflow-y: scroll;
+	overflow-x: hidden;
+}
