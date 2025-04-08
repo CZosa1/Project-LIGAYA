@@ -45,7 +45,7 @@ const Footer: React.FC = () => {
 				<section className={'left'}>
 					<p>Office: {info?.office.phone ?? '*'.repeat(10)}</p>
 					<p>{info?.office.email ?? '*'.repeat(10)}</p>
-					<a className={'instagramLink'} href={'https://www.instagram.com/project._.ligaya'}>
+					<a className={'instagramLink'} target={'_blank'} href={'https://www.instagram.com/project._.ligaya'}>
 						<img className={'logo'} src={InstagramLogo} />
 						<p>project._.ligaya</p>
 					</a>
