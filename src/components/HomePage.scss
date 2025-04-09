@@ -8,6 +8,7 @@ main.homePage {
 	}
 	
 	> section.introduction {
+		padding-top: 140px;
 		background-image: linear-gradient(-45deg, hsl(40, 9%, 87%), hsl(40, 9%, 67%));
 		text-align: center;
 		font-family: 'Oswald', 'Gill Sans', 'Gill Sans MT', sans-serif;
@@ -52,6 +53,12 @@ main.homePage {
 	}
 	
 	@media only screen and (max-width: 750px) {
+		> section.introduction {
+			> img.logo {
+				width: 80%;
+			}
+		}
+		
 		> section.body > div.content {
 			width: 85%;
 			gap: 16px;

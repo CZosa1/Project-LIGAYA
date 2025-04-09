@@ -6,6 +6,7 @@ import Footer from './Footer';
 import HomePage from './HomePage';
 import MissionPage from './MissionPage';
 import WhoPage from './WhoPage';
+import QRCodePage from './QRCodePage';
 import NotFoundPage from './NotFoundPage';
 
 import './App.scss';
@@ -27,6 +28,7 @@ const App: React.FC = () => {
 				<Route path={'/'} element={<HomePage />} />
 				<Route path={'/mission'} element={<MissionPage />} />
 				<Route path={'/who'} element={<WhoPage />} />
+				<Route path={'/qrcode'} element={<QRCodePage />} />
 				<Route path={'*'} element={<NotFoundPage />} />
 			</Routes>
 			<Footer />

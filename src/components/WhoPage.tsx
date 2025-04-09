@@ -24,30 +24,30 @@ const WhoPage: React.FC = () => {
 			<section className={'body'}>
 				<div className={'content'}>
 					<section className={'s1'}>
-						<img src={LaongLaan} />
+						<div className={'content'}>
+							<h1>TEAM LAONG-LAAN</h1>
+							<img src={LaongLaan} />
+						</div>
 					</section>
 					<section className={'s2'}>
-						<h1>TEAM LAONG-LAAN</h1>
+						<p>OVERSIGHT HEAD</p>
+						<img src={OversightHead} />
 					</section>
 					<section className={'s3'}>
-						<img src={OversightHead} />
-						<p>OVERSIGHT HEAD</p>
+						<p>OPERATIONS HEAD</p>
+						<img src={OperationsHead} />
 					</section>
 					<section className={'s4'}>
-						<img src={OperationsHead} />
-						<p>OPERATIONS HEAD</p>
+						<p>LOGISTICS HEAD</p>
+						<img src={LogisticsHead} />
 					</section>
 					<section className={'s5'}>
-						<img src={LogisticsHead} />
-						<p>LOGISTICS HEAD</p>
+						<p>RESEARCH HEAD</p>
+						<img src={ResearchHead} />
 					</section>
 					<section className={'s6'}>
-						<img src={ResearchHead} />
-						<p>RESEARCH HEAD</p>
-					</section>
-					<section className={'s7'}>
-						<img src={CreativesHead} />
 						<p>CREATIVES HEAD</p>
+						<img src={CreativesHead} />
 					</section>
 				</div>
 			</section>

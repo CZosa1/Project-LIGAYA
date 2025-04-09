@@ -4,6 +4,7 @@ import ReCAPTCHA from 'react-google-recaptcha';
 import InstagramLogo from '@/assets/instagram.svg';
 
 import './Footer.scss';
+import { Link } from 'react-router';
 
 const siteKey = '6LfD5AwrAAAAABc8-gH89zqTtB4xiqUknEHCquGO';
 
@@ -49,6 +50,10 @@ const Footer: React.FC = () => {
 						<img className={'logo'} src={InstagramLogo} />
 						<p>project._.ligaya</p>
 					</a>
+					<Link to={'/qrcode'} className={'share'}>
+						<span className={'material-symbols-outlined button'}>ios_share</span>
+						<p>https://ph.projectligaya.org/</p>
+					</Link>
 				</section>
 				<section className={'right'}>
 					{state === 'none' ? (

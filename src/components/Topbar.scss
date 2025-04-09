@@ -1,5 +1,5 @@
 .topbar {
-	background-color: hsl(40, 9%, 80%, 0.5);
+	background-color: hsl(0, 0%, 30%, 0.5);
 	box-shadow: 0 5px 30px hsla(0, 0%, 0%, 0.3);
 	backdrop-filter: blur(10px);
 	display: flex;
@@ -53,8 +53,9 @@
 			> a {
 				font-family: 'Gill Sans', 'Gill Sans MT', sans-serif;
 				font-size: 1.2rem;
-				color: black;
+				color: var(--color);
 				text-decoration: none;
+				--color: hsl(0, 0%, 100%);
 				
 				.material-symbols-outlined {
 					font-size: 1.2rem;
@@ -67,7 +68,7 @@
 				
 				&::after {
 					content: '';
-					background-color: black;
+					background-color: var(--color);
 					position: absolute;
 					left: 50%;
 					bottom: 0;
@@ -98,7 +99,7 @@
 				pointer-events: none;
 				
 				> .items {
-					background-color: hsla(40, 9%, 90%, 0.7);
+					background-color: hsla(0, 0%, 30%, 0.4);
 					backdrop-filter: blur(10px);
 					display: flex;
 					flex-direction: column;
@@ -115,7 +116,7 @@
 		}
 	}
 	
-	@media only screen and (max-width: 750px) {
+	@media only screen and (max-width: 700px) {
 		> .left {
 			display: none;
 		}

@@ -13,7 +13,6 @@ body {
 	top: 0;
 	right: 0;
 	bottom: 0;
-	padding-top: 60px;
 	display: flex;
 	flex-direction: column;
 	min-height: calc(100vh - 60px);
@@ -24,19 +23,19 @@ body {
 	&.chrome {
 		--scrollbar-thickness: 16px;
 		
-		&::-webkit-scrollbar {
+		&::-webkit-scrollbar, *::-webkit-scrollbar {
 			width: var(--scrollbar-thickness);
-			border-left: 1px solid hsla(0, 0%, 0%, 0.5);
+			border: 1px solid hsla(0, 0%, 0%, 0.5);
 			scrollbar-gutter: stable;
 			background-image: url("@/assets/ScrollbarTrack.png");
 			background-size: cover;
 		}
 		
-		&::-webkit-scrollbar-track {
+		&::-webkit-scrollbar-track, *::-webkit-scrollbar-track {
 			background: transparent;
 		}
 		
-		&::-webkit-scrollbar-thumb {
+		&::-webkit-scrollbar-thumb, *::-webkit-scrollbar-thumb {
 			background-image: url("@/assets/ScrollbarThumb.png");
 			border-radius: 8px;
 			border: var(--padding) solid transparent;

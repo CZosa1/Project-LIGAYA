@@ -26,6 +26,7 @@ footer {
 			align-items: center;
 			gap: 8px;
 			text-decoration: none;
+			width: fit-content;
 			
 			> .logo {
 				border-radius: 100%;
@@ -37,6 +38,43 @@ footer {
 			
 			> p {
 				color: black;
+			}
+			
+			&:hover > p {
+				text-decoration: underline;
+			}
+		}
+		
+		> a.share {
+			color: hsl(0, 0%, 0%);
+			display: flex;
+			flex-direction: row;
+			align-items: center;
+			gap: 8px;
+			text-decoration: none;
+			width: fit-content;
+			
+			> span.button {
+				background-color: hsl(34, 10%, 86%);
+				border: 1px solid hsla(0, 0%, 0%, 0.5);
+				display: flex;
+				flex-direction: row;
+				justify-content: center;
+				align-items: center;
+				width: 40px;
+				height: 40px;
+				gap: 5px;
+				border-radius: 100px;
+				outline: none;
+				cursor: pointer;
+				
+				> span {
+					font-size: 1.7rem;
+				}
+			}
+			
+			&:hover > p {
+				text-decoration: underline;
 			}
 		}
 	}
@@ -55,5 +93,10 @@ footer {
 			font-size: 1.1rem;
 			margin: 0 0 5px 0;
 		}
+	}
+	
+	@media only screen and (max-width: 750px) {
+		flex-direction: column;
+		gap: 0;
 	}
 }
