@@ -6,7 +6,7 @@ const Topbar: React.FC = () => {
 	const location = useLocation();
 	
 	return (
-		<div className={'topbar'}>
+		<div className={'topbar'} data-nosnippet>
 			<div className={'left'}>
 				<p className={'title'}>Project LIGAYA</p>
 			</div>

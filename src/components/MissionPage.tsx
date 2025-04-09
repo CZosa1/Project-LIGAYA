@@ -1,12 +1,18 @@
+import { useEffect } from 'react';
+
 import ProjectLigayaLogo from '@/assets/ProjectLigayaLogo.png';
 
 import './MissionPage.scss';
 
 const MissionPage: React.FC = () => {
+	useEffect(() => {
+		document.title = 'Project LIGAYA - Our Mission';
+	});
+	
 	return (
 		<main className={'missionPage'}>
-			<section className={'header'}>
-				<h1>OUR MISSION</h1>
+			<section className={'header'} data-nosnippet>
+				<h1>Our Mission</h1>
 				<img className={'background'} src={ProjectLigayaLogo} />
 			</section>
 			<section className={'body'}>

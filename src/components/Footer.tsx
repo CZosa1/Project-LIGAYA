@@ -41,7 +41,7 @@ const Footer: React.FC = () => {
 	return (
 		<>
 			<div className={'spacer'} />
-			<footer>
+			<footer data-nosnippet>
 				<section className={'left'}>
 					<p>Office: {info?.office.phone ?? '*'.repeat(10)}</p>
 					<p>{info?.office.email ?? '*'.repeat(10)}</p>

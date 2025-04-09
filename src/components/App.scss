@@ -19,4 +19,34 @@ body {
 	min-height: calc(100vh - 60px);
 	overflow-y: scroll;
 	overflow-x: hidden;
+	--scrollbar-thickness: 0;
+	
+	&.chrome {
+		--scrollbar-thickness: 16px;
+		
+		&::-webkit-scrollbar {
+			width: var(--scrollbar-thickness);
+			border-left: 1px solid hsla(0, 0%, 0%, 0.5);
+			scrollbar-gutter: stable;
+			background-image: url("@/assets/ScrollbarTrack.png");
+			background-size: cover;
+		}
+		
+		&::-webkit-scrollbar-track {
+			background: transparent;
+		}
+		
+		&::-webkit-scrollbar-thumb {
+			background-image: url("@/assets/ScrollbarThumb.png");
+			border-radius: 8px;
+			border: var(--padding) solid transparent;
+			border-left-width: calc(var(--padding) + 1px);
+			background-clip: content-box;
+			--padding: 3px;
+			
+			&:hover {
+				background-image: url("@/assets/ScrollbarThumb-hovered.png");
+			}
+		}
+	}
 }

@@ -4,11 +4,17 @@ import { BrowserRouter } from 'react-router';
 
 import App from '@/components/App';
 
-const root = createRoot(document.getElementById('root')!);
+const element = document.getElementById('root')!
+const root = createRoot(element);
 root.render(
 	<StrictMode>
 		<BrowserRouter>
 			<App />
 		</BrowserRouter>
 	</StrictMode>
-)
+);
+
+const userAgent = navigator.userAgent.toLowerCase();
+if (userAgent.includes('chrome')) {
+	element.classList.add('chrome');
+}

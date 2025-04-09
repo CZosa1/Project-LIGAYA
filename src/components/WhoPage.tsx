@@ -1,3 +1,5 @@
+import { useEffect } from 'react';
+
 import ProjectLigayaLogo from '@/assets/ProjectLigayaLogo.png';
 import LaongLaan from '@/assets/LAONG_LAAN.png';
 import OversightHead from '@/assets/OversightHead.png';
@@ -9,10 +11,14 @@ import CreativesHead from '@/assets/CreativesHead.png';
 import './WhoPage.scss';
 
 const WhoPage: React.FC = () => {
+	useEffect(() => {
+		document.title = 'Project LIGAYA - Who are we?';
+	});
+	
 	return (
 		<main className={'whoPage'}>
-			<section className={'header'}>
-				<h1>WHO ARE WE?</h1>
+			<section className={'header'} data-nosnippet>
+				<h1>Who are we?</h1>
 				<img className={'background'} src={ProjectLigayaLogo} />
 			</section>
 			<section className={'body'}>
