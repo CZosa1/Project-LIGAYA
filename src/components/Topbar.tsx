@@ -12,18 +12,18 @@ const Topbar: React.FC = () => {
 			</div>
 			<div className={'right'}>
 				<div className={'link'}>
-					<Link to={'/'} className={location.pathname === '/' ? 'active' : ''} viewTransition>
+					<Link to={'/'} className={location.pathname === '/' ? 'active' : ''}>
 						<span>What is Project LIGAYA?</span>
 					</Link>
 				</div>
 				<div className={'link'}>
-					<Link to={'/mission'} className={location.pathname === '/mission' ? 'active' : ''} viewTransition>
+					<Link to={'/mission'} className={location.pathname === '/mission' ? 'active' : ''}>
 						<span>Our Mission <span className={'material-symbols-outlined'}>arrow_drop_down</span></span>
 					</Link>
 					<div className={'dropdown'}>
 						<div className={'items'}>
 							<div className={'link'}>
-								<Link to={'/who'} className={location.pathname === '/who' ? 'active' : ''} viewTransition>
+								<Link to={'/who'} className={location.pathname === '/who' ? 'active' : ''}>
 									<span>Who are we?</span>
 								</Link>
 							</div>
