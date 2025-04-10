@@ -20,7 +20,7 @@ body {
 	overflow-x: hidden;
 	--scrollbar-thickness: 0;
 	
-	&.chrome {
+	&.scrollbar {
 		--scrollbar-thickness: 16px;
 		
 		&::-webkit-scrollbar, *::-webkit-scrollbar {

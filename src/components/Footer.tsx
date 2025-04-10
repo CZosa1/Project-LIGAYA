@@ -39,13 +39,16 @@ const Footer: React.FC = () => {
 		}
 	};
 	
+	const hiddenText = '\u2022'.repeat(20);
+	
 	return (
 		<>
 			<div className={'spacer'} />
 			<footer data-nosnippet>
 				<section className={'left'}>
-					<p>Office: {info?.office.phone ?? '*'.repeat(10)}</p>
-					<p>{info?.office.email ?? '*'.repeat(10)}</p>
+					<p className={'small'}>Office</p>
+					<p className={'officePhone'}>Phone: <span>{info?.office.phone ?? hiddenText}</span></p>
+					<p className={'officeEmail'}>E-Mail: <span>{info?.office.email ?? hiddenText}</span></p>
 					<a className={'instagramLink'} target={'_blank'} href={'https://www.instagram.com/project._.ligaya'}>
 						<img className={'logo'} src={InstagramLogo} />
 						<p>project._.ligaya</p>
@@ -63,9 +66,9 @@ const Footer: React.FC = () => {
 					) : null}
 					<p>For speaking requests and inquiries, please contact:</p>
 					<p className={'small'}>Ysabel Aquino</p>
-					<p>Phone: {info?.inquiries.phone ?? '*'.repeat(10)}</p>
+					<p>Phone: <span>{info?.inquiries.phone ?? hiddenText}</span></p>
 					<p className={'small'}>Georgine Malibiran</p>
-					<p>E-Mail: {info?.inquiries.email ?? '*'.repeat(10)}</p>
+					<p>E-Mail: <span>{info?.inquiries.email ?? hiddenText}</span></p>
 				</section>
 			</footer>
 		</>

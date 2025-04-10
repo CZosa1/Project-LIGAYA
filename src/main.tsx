@@ -16,5 +16,5 @@ root.render(
 
 const userAgent = navigator.userAgent.toLowerCase();
 if (userAgent.includes('chrome')) {
-	element.classList.add('chrome');
+	element.classList.add('scrollbar');
 }

@@ -23,31 +23,33 @@ const WhoPage: React.FC = () => {
 			</section>
 			<section className={'body'}>
 				<div className={'content'}>
-					<section className={'s1'}>
+					<section className={'team'}>
 						<div className={'content'}>
 							<h1>TEAM LAONG-LAAN</h1>
 							<img src={LaongLaan} />
 						</div>
 					</section>
-					<section className={'s2'}>
-						<p>OVERSIGHT HEAD</p>
-						<img src={OversightHead} />
-					</section>
-					<section className={'s3'}>
-						<p>OPERATIONS HEAD</p>
-						<img src={OperationsHead} />
-					</section>
-					<section className={'s4'}>
-						<p>LOGISTICS HEAD</p>
-						<img src={LogisticsHead} />
-					</section>
-					<section className={'s5'}>
-						<p>RESEARCH HEAD</p>
-						<img src={ResearchHead} />
-					</section>
-					<section className={'s6'}>
-						<p>CREATIVES HEAD</p>
-						<img src={CreativesHead} />
+					<section className={'heads'}>
+						<section className={'s2'}>
+							<p>OVERSIGHT HEAD</p>
+							<img src={OversightHead} />
+						</section>
+						<section className={'s3'}>
+							<p>OPERATIONS HEAD</p>
+							<img src={OperationsHead} />
+						</section>
+						<section className={'s4'}>
+							<p>LOGISTICS HEAD</p>
+							<img src={LogisticsHead} />
+						</section>
+						<section className={'s5'}>
+							<p>RESEARCH HEAD</p>
+							<img src={ResearchHead} />
+						</section>
+						<section className={'s6'}>
+							<p>CREATIVES HEAD</p>
+							<img src={CreativesHead} />
+						</section>
 					</section>
 				</div>
 			</section>

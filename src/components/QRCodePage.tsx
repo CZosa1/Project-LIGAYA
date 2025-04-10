@@ -9,24 +9,30 @@ const urlContent = 'https://ph.projectligaya.org';
 const QRCodePage: React.FC = () => {
 	const [generated, setGenerated] = useState<boolean>(false);
 	
+	const imageRef = useRef<HTMLImageElement>(null);
 	const canvasRef = useRef<HTMLCanvasElement>(null);
 	
 	useEffect(() => {
+		const image = imageRef.current;
 		const canvas = canvasRef.current;
-		if (canvas === null) {
+		if (image === null || canvas === null) {
 			return;
 		}
 		
 		new QrCode({
 			content: urlContent,
 			width: 512,
+			image: image,
 			canvas: canvas,
 			download: false,
 			cornersOptions: {
 				type: 'rounded',
+				radius: { inner: 8, outer: 15 },
+				color: 'hsl(40, 9%, 37%)',
 			},
 			dotsOptions: {
 				type: 'fluid',
+				color: 'hsl(40, 9%, 57%)',
 			},
 		});
 		
@@ -36,41 +42,44 @@ const QRCodePage: React.FC = () => {
 	return (
 		<main className={'qrCodePage'}>
 			{!generated ? (
-				<p>Generating QR code...</p>
+				<p className={'url'}>Generating QR code...</p>
 			) : (
-				<p>{urlContent}</p>
+				<p className={'url'}>{urlContent}</p>
 			)}
-			<canvas className={'qrcode'} ref={canvasRef} />
-			<button
-				className={'download'}
-				onClick={() => {
-					const canvas = canvasRef.current;
-					if (!canvas) {
-						return;
-					}
-					
-					canvas.toBlob(async (blob) => {
-						if (blob === null) {
-							alert('Failed to download QR code, please try again');
+			<img className={'qrcode'} ref={imageRef} />
+			<canvas style={{ display: 'none' }} ref={canvasRef} />
+			{typeof navigator !== 'undefined' && !/(iPad)|(iPhone)|(iPod)/.test(navigator.userAgent) && (
+				<button
+					className={'download'}
+					onClick={() => {
+						const canvas = canvasRef.current;
+						if (!canvas) {
 							return;
 						}
 						
-						try {
-							const clipboardItem = new ClipboardItem({
-								'image/png': blob,
-							});
+						canvas.toBlob(async (blob) => {
+							if (blob === null) {
+								alert('Failed to download QR code');
+								return;
+							}
 							
-							await navigator.clipboard.write([clipboardItem]);
-							alert('Copied to clipboard!');
-						} catch (err) {
-							console.warn('Failed to copy to clipboard:', err);
-							alert('Failed to copy to clipboard, please try again');
-						}
-					});
-				}}
-			>
-				Copy to clipboard
-			</button>
+							try {
+								const clipboardItem = new ClipboardItem({
+									'image/png': blob,
+								});
+								
+								await navigator.clipboard.write([clipboardItem]);
+								alert('Copied to clipboard!');
+							} catch (err) {
+								console.warn('Failed to copy to clipboard:', err);
+								alert(`Failed to copy to clipboard ${navigator.userAgent}`);
+							}
+						});
+					}}
+				>
+					Copy to clipboard
+				</button>
+			)}
 			<button
 				className={'download'}
 				onClick={() => {

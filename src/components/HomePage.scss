@@ -20,6 +20,7 @@ main.homePage {
 			border-radius: 32px;
 			border: 10px solid transparent;
 			outline: 8px dashed hsla(0, 0%, 0%, 0.15);
+			background-color: hsla(0, 0%, 0%, 0.05);
 		}
 		
 		> h1.title {
@@ -54,8 +55,12 @@ main.homePage {
 	
 	@media only screen and (max-width: 750px) {
 		> section.introduction {
+			padding-top: 100px;
+			
 			> img.logo {
-				width: 80%;
+				border-width: 5px;
+				outline-width: 4px;
+				width: 85%;
 			}
 		}
 		
